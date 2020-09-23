@@ -34,3 +34,34 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+                from components.release
+
+                // You can then customize attributes of the publication as shown below.
+                groupId = 'ro.dragossusi'
+                artifactId = 'errordata'
+                version = '1.0'
+            }
+            // Creates a Maven publication called “debug”.
+            debug(MavenPublication) {
+                // Applies the component for the debug build variant.
+                from components.debug
+
+                groupId = 'ro.rachieru.dragos'
+                artifactId = 'errordata-debug'
+                version = '1.0'
+            }
+        }
+        repositories {
+            maven {
+                url = "/ssdlarge/first/maven/android"
+            }
+        }
+    }
+}
