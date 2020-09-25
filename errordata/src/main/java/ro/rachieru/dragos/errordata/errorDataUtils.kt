@@ -8,3 +8,7 @@ package ro.rachieru.dragos.errordata
 fun Throwable.toErrorData(): ErrorData {
     return ThrowableErrorData(this)
 }
+
+fun String.toErrorData(): ErrorData {
+    return StringErrorData(this)
+}

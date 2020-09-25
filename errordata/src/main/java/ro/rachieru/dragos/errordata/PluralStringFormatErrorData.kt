@@ -21,4 +21,5 @@ class PluralStringFormatErrorData(
     override fun getError(resources: Resources): String {
         return resources.getQuantityString(pluralRes, quantity, args)
     }
+
 }
