@@ -1,2 +1,2 @@
-include ':errordata'
+include (":errordata")
 rootProject.name = "Error Data"
