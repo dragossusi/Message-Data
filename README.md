@@ -1,6 +1,8 @@
 # Error-Data
+[![Maven Central](https://maven-badges-generator.herokuapp.com/maven-central/ro.dragossusi/errordata/badge.svg)](https://maven-badges-generator.herokuapp.com/maven-central/ro.dragossusi/errordata)
+
+
 Error data classes for easier handling.
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/ro.dragossusi/errordata/badge.svg)](https://repo1.maven.org/maven2/ro/dragossusi/errordata/)
 
 ### Download
 
