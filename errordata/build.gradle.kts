@@ -38,7 +38,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}")
     implementation("androidx.core:core-ktx:1.3.1")
     implementation("androidx.appcompat:appcompat:1.2.0")
-    testImplementation("junit:junit:4.12")
+    testImplementation("junit:junit:4.13")
     androidTestImplementation("androidx.test.ext:junit:1.1.2")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
 
@@ -46,7 +46,7 @@ dependencies {
 
 afterEvaluate {
     val localProps = Properties()
-    localProps.load(FileInputStream(file("../signing.properties")))
+    localProps.load(FileInputStream(file("maven.properties")))
     publishing {
         publications {
             // Creates a Maven publication called "release".
@@ -57,12 +57,12 @@ afterEvaluate {
                 // You can then customize attributes of the publication as shown below.
                 groupId = "ro.dragossusi"
                 artifactId = "errordata"
-                version = "1.0"
+                version = "1.0.1"
 
                 pom {
                     name.set("ErrorData")
                     description.set("Android error classes for easier handling")
-                    url.set("http://www.example.com/library")
+                    url.set("https://github.com/dragossusi/Error-Data/")
                     licenses {
                         license {
                             name.set("The Apache License, Version 2.0")
