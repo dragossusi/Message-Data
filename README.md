@@ -1,4 +1,4 @@
 # Error-Data
 Error data classes for easier handling.
 
-[![Release](https://jitpack.io/v/dragossusi/Error-Data.svg)](https://jitpack.io/#dragossusi/Error-Data)
+![version](https://img.shields.io/badge/version-1.0-blue)(https://repo1.maven.org/maven2/ro/dragossusi/errordata/)
