@@ -9,6 +9,6 @@ Error data classes for easier handling.
 Gradle:
 ```gradle
 dependencies {
-  implementation 'ro.dragossusi:errordata:1.0'
+  implementation 'ro.dragossusi:errordata:1.0.1'
 }
 ```
