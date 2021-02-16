@@ -12,5 +12,4 @@
 /captures
 .externalNativeBuild
 .cxx
-errordata/maven.properties
 /buildSrc/build/

@@ -1,2 +1,3 @@
-include (":errordata")
-rootProject.name = "Error Data"
+rootProject.name = "MessageData"
+include(":messagedata-android")
+include(":messagedata")
