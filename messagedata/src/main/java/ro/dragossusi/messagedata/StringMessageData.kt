@@ -1,6 +1,5 @@
 package ro.dragossusi.messagedata
 
-import ro.dragossusi.messagedata.MessageData
 import ro.dragossusi.messagedata.parser.MessageDataParser
 import java.io.Serializable
 

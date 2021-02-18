@@ -6,7 +6,8 @@ package ro.dragossusi.messagedata
  * @since 02.07.2020
  */
 fun Throwable.toMessageData(): MessageData {
-    return ThrowableMessageData(this)
+    return if (this is MessageData) this
+    else ThrowableMessageData(this)
 }
 
 fun String.toMessageData(): MessageData {
