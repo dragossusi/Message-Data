@@ -7,7 +7,7 @@ import ro.dragossusi.messagedata.parser.MessageDataParser
  * @author dragos
  * @since 15/02/21
  */
-class ConcatMessageData(
+data class ConcatMessageData(
     val first: MessageData,
     val second: MessageData,
     val separator: MessageData? = null

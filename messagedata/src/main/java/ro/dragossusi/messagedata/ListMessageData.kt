@@ -7,7 +7,7 @@ import ro.dragossusi.messagedata.parser.MessageDataParser
  * @author dragos
  * @since 15/02/21
  */
-class ListErrorData(
+data class ListErrorData(
     val list: List<MessageData>,
     val separator: MessageData
 ) : MessageData {
