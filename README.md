@@ -1,4 +1,4 @@
-# Error-Data
+# Message-Data
 
 [![Maven Central](https://maven-badges-generator.herokuapp.com/maven-central/ro.dragossusi/messagedata/badge.svg)](https://maven-badges-generator.herokuapp.com/maven-central/ro.dragossusi/messagedata)
 
