@@ -4,9 +4,11 @@ import android.content.Context
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
 import ro.dragossusi.messagedata.MessageData
+import ro.dragossusi.messagedata.android.LocalizedMessageData
 import ro.dragossusi.messagedata.android.R
 import ro.dragossusi.messagedata.android.alert.AlertHandler
 import ro.dragossusi.messagedata.android.parser.ResourceMessageDataParser
+import ro.dragossusi.messagedata.toMessageData
 
 /**
  *
@@ -25,8 +27,8 @@ open class AlertMessageDataHandler(
 
     override fun onUnknownError(throwable: Throwable) {
         throwable.message?.let {
-            alertHandler.showError(it)
-        } ?: alertHandler.showError(R.string.error_generic_network)
+            alertHandler.showError(it.toMessageData())
+        } ?: alertHandler.showError(LocalizedMessageData(R.string.error_generic_network))
     }
 
 }

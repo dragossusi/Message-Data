@@ -19,7 +19,7 @@ data class ConcatMessageData(
         separator: String?
     ) : this(first, second, separator?.toMessageData())
 
-    override fun getMessage(parser: MessageDataParser): String {
+    override fun getMessage(parser: MessageDataParser): CharSequence {
         val stringBuilder = StringBuilder()
         stringBuilder.append(first.getMessage(parser))
         separator?.let {

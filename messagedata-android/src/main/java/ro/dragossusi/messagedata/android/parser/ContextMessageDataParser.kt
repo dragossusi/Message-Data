@@ -28,10 +28,18 @@ import ro.dragossusi.messagedata.parser.MessageDataParser
  * along with MessageData.  If not, see [License](http://www.gnu.org/licenses/) .
  *
  */
+@Deprecated(
+    "use extensions",
+    ReplaceWith(
+        "context.toMessageDataParser()",
+        "ro.dragossusi.messagedata.android.parser.toMessageDataParser"
+    )
+)
 class ContextMessageDataParser(
-    val context: Context
+    private val context: Context
 ) : ResourceMessageDataParser {
 
     override val resources: Resources
         get() = context.resources
+
 }

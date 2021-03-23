@@ -1,7 +1,6 @@
 package ro.dragossusi.messagedata
 
 import ro.dragossusi.messagedata.parser.MessageDataParser
-import java.io.Serializable
 
 /**
  *
@@ -11,10 +10,10 @@ import java.io.Serializable
 data class ThrowableMessageData(
     val throwable: Throwable,
     val fallback: MessageData = "Unknown Error".toMessageData()
-) : MessageData, Serializable {
+) : MessageData {
 
-    override fun getMessage(parser: MessageDataParser): String {
-        return throwable.localizedMessage ?: fallback.getMessage(parser)
+    override fun getMessage(parser: MessageDataParser): CharSequence {
+        return throwable.message ?: fallback.getMessage(parser)
     }
 
 }

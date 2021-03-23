@@ -5,6 +5,7 @@ import androidx.appcompat.app.AlertDialog
 import ro.dragossusi.messagedata.MessageData
 import ro.dragossusi.messagedata.android.parser.ContextMessageDataParser
 import ro.dragossusi.messagedata.android.parser.ResourceMessageDataParser
+import ro.dragossusi.messagedata.android.parser.toMessageDataParser
 
 /**
  * MessageData
@@ -28,25 +29,18 @@ import ro.dragossusi.messagedata.android.parser.ResourceMessageDataParser
  * along with MessageData.  If not, see [License](http://www.gnu.org/licenses/) .
  *
  */
-class ContextAlertHandler(
+open class ContextAlertHandler(
     private val context: Context
 ) : AlertHandler {
 
-    override val parser = ContextMessageDataParser(context)
+    override val parser = context.toMessageDataParser()
 
     override fun showError(messageData: MessageData) {
-        showError(messageData.getMessage(parser))
-    }
-
-    override fun showError(message: String) {
+        val message = messageData.getMessage(parser)
         createDialog(message)
     }
 
-    override fun showError(messageId: Int) {
-        createDialog(context.getString(messageId))
-    }
-
-    private fun createDialog(message: String) {
+    protected open fun createDialog(message: CharSequence) {
         AlertDialog.Builder(context)
             .setMessage(message)
             .setPositiveButton(android.R.string.ok) { dialog, _ -> dialog.dismiss() }

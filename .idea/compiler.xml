@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="1.8" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="MessageData.messagedata.commonMain" target="1.6" />
+      <module name="messagedata.messagedata.commonMain" target="1.6" />
+      <module name="messagedata.messagedata.commonTest" target="1.6" />
+      <module name="MessageData.messagedata.commonTest" target="1.6" />
+      <module name="messagedata.messagedata.jvmMain" target="1.6" />
+      <module name="MessageData.messagedata.jvmMain" target="1.6" />
+      <module name="MessageData.messagedata.jvmTest" target="1.6" />
+      <module name="messagedata.messagedata.jvmTest" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>

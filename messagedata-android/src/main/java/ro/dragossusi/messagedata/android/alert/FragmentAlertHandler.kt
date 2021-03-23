@@ -7,6 +7,7 @@ import ro.dragossusi.messagedata.MessageData
 import ro.dragossusi.messagedata.android.parser.ContextMessageDataParser
 import ro.dragossusi.messagedata.android.parser.FragmentMessageDataParser
 import ro.dragossusi.messagedata.android.parser.ResourceMessageDataParser
+import ro.dragossusi.messagedata.android.parser.toMessageDataParser
 
 /**
  * MessageData
@@ -30,29 +31,22 @@ import ro.dragossusi.messagedata.android.parser.ResourceMessageDataParser
  * along with MessageData.  If not, see [License](http://www.gnu.org/licenses/) .
  *
  */
-class FragmentAlertHandler(
+open class FragmentAlertHandler(
     private val fragment: Fragment
 ) : AlertHandler {
 
-    override val parser = FragmentMessageDataParser(fragment)
+    override val parser = fragment.toMessageDataParser()
 
     override fun showError(messageData: MessageData) {
-        showError(messageData.getMessage(parser))
+        createDialog(messageData.getMessage(parser))
     }
 
-    override fun showError(message: String) {
-        createDialog(message)
-    }
-
-    override fun showError(messageId: Int) {
-        createDialog(fragment.getString(messageId))
-    }
-
-    private fun createDialog(message: String) {
+    protected open fun createDialog(message: CharSequence) {
         AlertDialog.Builder(fragment.requireContext())
             .setMessage(message)
             .setPositiveButton(android.R.string.ok) { dialog, _ -> dialog.dismiss() }
             .setCancelable(false)
             .show()
     }
+
 }

@@ -27,11 +27,9 @@ import ro.dragossusi.messagedata.parser.MessageDataParser
  *
  */
 interface AlertHandler {
+
     val parser: MessageDataParser
 
     fun showError(messageData: MessageData)
-    fun showError(message: String)
-    fun showError(@StringRes messageId: Int)
-
 
 }

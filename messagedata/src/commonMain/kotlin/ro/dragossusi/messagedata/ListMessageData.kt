@@ -7,7 +7,7 @@ import ro.dragossusi.messagedata.parser.MessageDataParser
  * @author dragos
  * @since 15/02/21
  */
-data class ListErrorData(
+data class ListMessageData(
     val list: List<MessageData>,
     val separator: MessageData
 ) : MessageData {
@@ -17,17 +17,17 @@ data class ListErrorData(
         separator: String
     ) : this(list, separator.toMessageData())
 
-    override fun getMessage(parser: MessageDataParser): String {
+    override fun getMessage(parser: MessageDataParser): CharSequence {
         return list.joinToString(separator = separator.getMessage(parser)) {
             it.getMessage(parser)
         }
     }
 }
 
-fun List<MessageData>.join(separator: MessageData): ListErrorData {
-    return ListErrorData(this, separator)
+fun List<MessageData>.join(separator: MessageData): ListMessageData {
+    return ListMessageData(this, separator)
 }
 
-fun List<MessageData>.join(separator: String): ListErrorData {
-    return ListErrorData(this, separator)
+fun List<MessageData>.join(separator: String): ListMessageData {
+    return ListMessageData(this, separator)
 }

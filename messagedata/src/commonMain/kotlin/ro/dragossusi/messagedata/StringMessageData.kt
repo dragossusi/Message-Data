@@ -1,17 +1,16 @@
 package ro.dragossusi.messagedata
 
 import ro.dragossusi.messagedata.parser.MessageDataParser
-import java.io.Serializable
 
 /**
  *
  * @author Dragos
- * @since 17.06.2020
+ * @since 25.03.2020
  */
-object EmptyMessageData : MessageData, Serializable {
+data class StringMessageData(val message: String) : MessageData {
 
     override fun getMessage(parser: MessageDataParser): String {
-        return ""
+        return message
     }
 
 }
