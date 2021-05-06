@@ -31,3 +31,8 @@ interface ResourceMessageDataParser : MessageDataParser {
     val resources: Resources
 
 }
+
+fun MessageDataParser.requireResourceParser(): ResourceMessageDataParser {
+    if (this is ResourceMessageDataParser) return this
+    throw IllegalArgumentException("parser must be ResourceMessageDataParser")
+}

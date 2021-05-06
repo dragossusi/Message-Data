@@ -26,7 +26,6 @@ import ro.dragossusi.messagedata.MessageData
  */
 class MessageDataException(
     val messageData: MessageData
-) : Exception(), MessageData by messageData {
+) : Exception(), MessageData by messageData
 
-
-}
+fun MessageData.toThrowable() = MessageDataException(this)

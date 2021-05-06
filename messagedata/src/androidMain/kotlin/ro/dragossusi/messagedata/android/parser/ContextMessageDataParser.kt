@@ -32,7 +32,7 @@ import ro.dragossusi.messagedata.parser.MessageDataParser
     "use extensions",
     ReplaceWith(
         "context.toMessageDataParser()",
-        "ro.dragossusi.messagedata.android.parser.toMessageDataParser"
+        "toMessageDataParser"
     )
 )
 class ContextMessageDataParser(

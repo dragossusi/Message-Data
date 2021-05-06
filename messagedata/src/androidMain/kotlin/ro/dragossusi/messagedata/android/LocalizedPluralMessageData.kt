@@ -13,7 +13,7 @@ import ro.dragossusi.messagedata.parser.MessageDataParser
  * @since 25.03.2020
  */
 @Parcelize
-class LocalizedPluralMessageData(
+open class LocalizedPluralMessageData(
     @PluralsRes
     val pluralRes: Int,
     val quantity: Int,
