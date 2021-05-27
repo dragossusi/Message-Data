@@ -1,7 +1,7 @@
 package ro.dragossusi.messagedata.android
 
 import androidx.annotation.StringRes
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 import ro.dragossusi.messagedata.android.parser.ResourceMessageDataParser
 import ro.dragossusi.messagedata.android.parser.requireResourceParser
 import ro.dragossusi.messagedata.parser.MessageDataParser

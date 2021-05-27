@@ -1,8 +1,8 @@
 package ro.dragossusi.messagedata.android
 
 import androidx.annotation.StringRes
-import kotlinx.android.parcel.Parcelize
-import ro.dragossusi.messagedata.android.parser.ResourceMessageDataParser
+import kotlinx.parcelize.Parcelize
+import ro.dragossusi.messagedata.MessageData
 import ro.dragossusi.messagedata.android.parser.requireResourceParser
 import ro.dragossusi.messagedata.parser.MessageDataParser
 
@@ -14,12 +14,16 @@ import ro.dragossusi.messagedata.parser.MessageDataParser
 @Parcelize
 open class LocalizedFormatMessageData(
     @StringRes val stringRes: Int,
-    vararg val args: String
+    vararg val args: MessageData
 ) : AndroidMessageData {
 
     override fun getMessage(parser: MessageDataParser): String {
+        val arguments = args.map {
+            it.getMessage(parser)
+        }
         return parser.requireResourceParser()
             .resources
-            .getString(stringRes, *args)
+            .getString(stringRes, arguments)
     }
+
 }

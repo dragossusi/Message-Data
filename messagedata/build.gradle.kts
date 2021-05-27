@@ -17,7 +17,7 @@ java {
 kotlin {
 
     android {
-        publishLibraryVariants("release","debug")
+        publishLibraryVariants("release", "debug")
     }
     jvm()
     ios()
@@ -72,19 +72,7 @@ android {
         }
     }
 
-//    buildTypes {
-//        getByName("release") {
-//            isMinifyEnabled = false
-//            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-//        }
-//    }
 }
-
-//val sourcesJar by tasks.registering(Jar::class) {
-//    classifier = "sources"
-//    from(sourceSets.main.get().allSource)
-//}
-
 
 publishing {
     publications {
@@ -99,4 +87,3 @@ publishing {
 }
 
 apply<PublishPlugin>()
-//}

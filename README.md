@@ -10,7 +10,7 @@ Gradle:
 
 ```gradle
 dependencies {
-  implementation 'ro.dragossusi:messagedata:1.0.5'
+  implementation 'ro.dragossusi:messagedata:1.0.8'
 }
 ```
 
@@ -68,7 +68,7 @@ Gradle:
 
 ```gradle
 dependencies {
-  implementation 'ro.dragossusi:messagedata-android:1.0.5'
+  implementation 'ro.dragossusi:messagedata-android:1.0.8'
 }
 ```
 
