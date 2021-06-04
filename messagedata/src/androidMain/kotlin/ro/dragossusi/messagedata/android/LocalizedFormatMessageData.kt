@@ -23,7 +23,7 @@ open class LocalizedFormatMessageData(
         }
         return parser.requireResourceParser()
             .resources
-            .getString(stringRes, arguments)
+            .getString(stringRes, *arguments.toTypedArray())
     }
 
 }
