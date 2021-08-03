@@ -62,16 +62,6 @@ println((first + second).getMEssage(parser)) // prints "FirstSecond"
 
 # Android
 
-### Download
-
-Gradle:
-
-```gradle
-dependencies {
-  implementation 'ro.dragossusi:messagedata-android:1.0.8'
-}
-```
-
 ### Usage
 
 You can create localized messages from android resources.
