@@ -12,7 +12,7 @@ import ro.dragossusi.messagedata.handler.MessageDataHandler
  */
 abstract class NetworkMessageDataHandler : MessageDataHandler {
 
-    final override fun routeErrorData(messageData: MessageData): Boolean {
+    final override fun routeMessageData(messageData: MessageData): Boolean {
         if (messageData is ThrowableMessageData) {
             return routeThrowable(messageData.throwable)
         }

@@ -21,6 +21,7 @@ kotlin {
     }
     jvm()
     ios()
+    js(IR)
 
 
     sourceSets {
@@ -47,12 +48,11 @@ kotlin {
 }
 
 android {
-    compileSdkVersion(30)
-    buildToolsVersion("30.0.3")
+    compileSdk = 31
 
     defaultConfig {
-        minSdkVersion(16)
-        targetSdkVersion(30)
+        minSdk = 16
+        targetSdk = 31
         versionCode = 1
         versionName = Versions.app
 
@@ -86,4 +86,7 @@ publishing {
     }
 }
 
+if (Features.isAndroidEnabled) {
+    apply(plugin = "install-android")
+}
 apply<PublishPlugin>()
