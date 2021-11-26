@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.library") apply false
+    id("com.android.library")
 }
 
 android {
@@ -8,8 +8,6 @@ android {
     defaultConfig {
         minSdk = 21
         targetSdk = 31
-        versionCode = 1
-        versionName = "1.0"
     }
 
     compileOptions {
@@ -18,7 +16,7 @@ android {
     }
 
     sourceSets {
-        val main by getting {
+        getByName("main") {
             manifest.srcFile("src/androidMain/AndroidManifest.xml")
             res.srcDirs("src/androidMain/res")
         }
