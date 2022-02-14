@@ -1,6 +1,8 @@
 # Message-Data
 
 [![Maven Central](https://maven-badges-generator.herokuapp.com/maven-central/ro.dragossusi/messagedata/badge.svg)](https://maven-badges-generator.herokuapp.com/maven-central/ro.dragossusi/messagedata)
+[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-Dragos%20Rachieru-green.svg?style=flat )]( https://android-arsenal.com/details/1/8308 )
+
 
 Message data classes for easier handling.
 
