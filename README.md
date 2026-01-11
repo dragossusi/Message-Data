@@ -12,7 +12,7 @@ Gradle:
 
 ```gradle
 dependencies {
-  implementation 'ro.dragossusi:messagedata:3.0.0'
+  implementation 'ro.dragossusi:messagedata:3.0.4'
 }
 ```
 
