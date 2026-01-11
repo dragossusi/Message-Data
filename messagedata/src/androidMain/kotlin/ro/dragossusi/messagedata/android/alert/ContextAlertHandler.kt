@@ -3,8 +3,6 @@ package ro.dragossusi.messagedata.android.alert
 import android.content.Context
 import androidx.appcompat.app.AlertDialog
 import ro.dragossusi.messagedata.MessageData
-import ro.dragossusi.messagedata.android.parser.ContextMessageDataParser
-import ro.dragossusi.messagedata.android.parser.ResourceMessageDataParser
 import ro.dragossusi.messagedata.android.parser.toMessageDataParser
 
 /**
